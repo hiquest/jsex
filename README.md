@@ -33,3 +33,7 @@ A collection of little and fun JavaScript exercises
 
 You can see the solutions if you switch to the `solutions` branch. But that's
 no fun.
+
+## Author
+
+You can [follow me on Gumroad](https://gumroad.com/yanis_t).
