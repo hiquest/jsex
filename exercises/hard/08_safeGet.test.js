@@ -7,8 +7,11 @@
 */
 
 
-function safeGet() {
-  // IMPLEMENT ME
+function safeGet(obj, path) {
+  const keys = path.split('.')
+  return keys.reduce((acc, key) => {
+    return (acc || {})[key] ? acc[key] : null 
+  }, obj)
 }
 
 /* =========== DON'T CHANGE THE CODE AFTER THIS LINE ===============" */

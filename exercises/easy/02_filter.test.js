@@ -7,8 +7,8 @@
  * !!! This time use Array.prototype.reduce
 */
 
-function filter() {
-  // IMPLEMENT ME
+function filter(arr, fn) {
+  return arr.reduce((acc, el) => fn(el) ? [...acc, el] : acc, [])
 }
 
 /* =========== DON'T CHANGE THE CODE AFTER THIS LINE ===============" */

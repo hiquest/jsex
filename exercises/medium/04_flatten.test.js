@@ -5,7 +5,9 @@
 */
 
 function flatten(arr) {
-  // IMPLEMENT ME
+  return arr.reduce(
+    (acc, el) => Array.isArray(el) ? [...acc, ...flatten(el)] : [...acc, el],
+  [])
 }
 
 /* =========== DON'T CHANGE THE CODE AFTER THIS LINE ===============" */

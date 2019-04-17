@@ -8,7 +8,14 @@
 
 
 function memoize(fn) {
-  // IMPLEMENT ME
+  const cache = {}
+  return function(...args) {
+    const key = args.join("-")
+    if (Object.keys(cache).indexOf(key) === -1) {
+      cache[key] = fn(...args)
+    }
+    return cache[key]
+  }
 }
 
 /* =========== DON'T CHANGE THE CODE AFTER THIS LINE ===============" */

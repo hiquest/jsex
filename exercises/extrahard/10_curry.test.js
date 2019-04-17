@@ -7,7 +7,17 @@
 */
 
 function curry(fn, arity) {
-  // IMPLEMENT ME
+  arity = arity || fn.length
+  return function(...args) {
+    if (args.length < arity) {
+      function f(...lefts) {
+        return fn(...args, ...lefts)
+      }
+      return curry(f, arity - args.length)
+    } else {
+      return fn(...args)
+    }
+  }
 }
 
 /* =========== DON'T CHANGE THE CODE AFTER THIS LINE ===============" */

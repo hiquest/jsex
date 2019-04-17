@@ -6,8 +6,14 @@
 */
 
 
-function sample() {
-  // IMPLEMENT ME
+function sample(arr, n) {
+  const length = arr.length
+  const indices = []
+  while(indices.length < n){
+    const r = Math.floor(Math.random() * length);
+    if (indices.indexOf(r) === -1) indices.push(r);
+  }
+  return indices.map(i => arr[i])
 }
 
 /* =========== DON'T CHANGE THE CODE AFTER THIS LINE ===============" */

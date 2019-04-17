@@ -9,8 +9,12 @@
  * It's fine to use an imperative approach
 */
 
-function map() {
-  // TODO: IMPLEMENT ME
+function map(arr, fn) {
+  let out = []
+  for (el of arr) {
+    out = [...out, fn(el)]
+  }
+  return out
 }
 
 /* =========== DON'T CHANGE THE CODE AFTER THIS LINE ===============" */

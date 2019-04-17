@@ -8,7 +8,9 @@
 */
 
 function reduce(arr, fn, initial) {
-  // IMPLEMENT ME
+  if (arr.length === 0) return initial
+  const [head, ...tail] = arr
+  return reduce(tail, fn, fn(initial, head))
 }
 
 /* =========== DON'T CHANGE THE CODE AFTER THIS LINE ===============" */

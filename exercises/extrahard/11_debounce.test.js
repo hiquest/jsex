@@ -6,9 +6,18 @@
  * when the specified time passed since the last call.
 */
 
-
 function debounce(func, wait, immediate) {
-  // IMPLEMENT ME
+  let timeout
+  return (...args) => {
+    const later = () => {
+      timeout = null
+      if (!immediate) func(...args)
+    }
+    const callNow = immediate && !timeout
+    clearTimeout(timeout)
+    timeout = setTimeout(later, wait)
+    if (callNow) func(...args)
+  }
 }
 
 /* =========== DON'T CHANGE THE CODE AFTER THIS LINE ===============" */

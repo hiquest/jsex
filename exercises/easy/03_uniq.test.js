@@ -6,7 +6,7 @@
 */
 
 function uniq(arr) {
-  // IMPLEMENT ME
+  return arr.reduce((acc, el) => acc.indexOf(el) > -1 ? acc : [...acc, el], [])
 }
 
 /* =========== DON'T CHANGE THE CODE AFTER THIS LINE ===============" */
