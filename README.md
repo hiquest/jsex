@@ -1,5 +1,5 @@
 # 💥 JSEX 💥
-A collection of little and fun JavaScript exercises
+Implement Some Handy JavaSript Functions From The Ground Up
 
 ## How to use it?
 
