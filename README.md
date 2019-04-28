@@ -34,7 +34,7 @@ Implement Some Handy JavaSript Functions From The Ground Up
 - You can see the solutions if you switch to the `solutions` branch. But that's
 no fun.
 
-- Also, if you can tolerate bad English, you can watch [me solving those on YouTube](https://www.youtube.com/watch?v=65QqohgV-co)
+- Also, if you can tolerate bad English, you can watch [me solving those on YouTube](https://www.youtube.com/watch?v=65QqohgV-co), and [part II](https://www.youtube.com/watch?v=eGbW-erYH60).
 
 ## Author
 
