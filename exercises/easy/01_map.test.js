@@ -7,7 +7,7 @@
  *
  * You can't use Array.prototype.map
  * It's fine to use an imperative approach
-*/
+ */
 
 function map(arr, fn) {
   return arr.reduce((acc, element) => acc.concat(fn(element)), [])

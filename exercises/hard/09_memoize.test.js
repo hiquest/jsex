@@ -4,7 +4,7 @@
  * Memoize converts a function into a new function that caches it's values for
  * the same set of arguments (this is handy when a function executes some heavy
  * logic and you don't want to waste resources)
-*/
+ */
 
 const addKeyVal = dict => key => val => {
   dict[key] = val

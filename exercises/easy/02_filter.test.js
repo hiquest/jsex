@@ -5,7 +5,7 @@
  * containing only the elements for which the filter function returns true.
  *
  * This time use Array.prototype.reduce
-*/
+ */
 
 function filter(arr, fn) {
 	return arr.reduce((acc, element) => acc.concat(fn(element) ? element : []), [])

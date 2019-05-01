@@ -3,7 +3,7 @@
  *
  * Takes in an array of elements and returns the array with all the duplicates
  * removed.
-*/
+ */
 
 function uniq(arr) {
 	return arr.reduce((acc, element) => acc.concat(acc.includes(element) ? [] : element), [])

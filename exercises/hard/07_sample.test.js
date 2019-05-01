@@ -3,7 +3,7 @@
  *
  * Takes an array of items and a number n,
  * returns n random and uniq items from that list
-*/
+ */
 
 function sample(arr, n) {
   return arr.reduce(acc => {

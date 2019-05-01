@@ -4,7 +4,7 @@
  * Currying is a very common operation in functional programming. A curried
  * function is a function that can be invoked with only some of the arguments.
  * In this case it will return a new function that should take the rest
-*/
+ */
 
 function curry(fn, arity) {
   arity = arity || fn.length
