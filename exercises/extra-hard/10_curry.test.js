@@ -7,19 +7,18 @@
 */
 
 function curry(fn, arity) {
-	// TODO - IMPLEMENT ME
+  // TODO - IMPLEMENT ME
 }
 
 /* =========== DON'T CHANGE THE CODE AFTER THIS LINE =============== */
 
 test('curries a function', () =>
-	expect(curry((x, y) => x + y)(5)(10)).toEqual(15)
-)
+  expect(curry((x, y) => x + y)(5)(10)).toEqual(15))
 
 test('curries a function of many arguments', () => {
-	const sum = curry((a, b, c) => a + b + c)
-	expect(sum(1, 2, 3)).toEqual(6)
-	expect(sum(1)(2, 3)).toEqual(6)
-	expect(sum(1, 2)(3)).toEqual(6)
-	expect(sum(1)(2)(3)).toEqual(6)
+  const sum = curry((a, b, c) => a + b + c)
+  expect(sum(1, 2, 3)).toEqual(6)
+  expect(sum(1)(2, 3)).toEqual(6)
+  expect(sum(1, 2)(3)).toEqual(6)
+  expect(sum(1)(2)(3)).toEqual(6)
 })

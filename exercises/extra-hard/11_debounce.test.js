@@ -7,20 +7,20 @@
 */
 
 function debounce(func, wait, immediate) {
-	// TODO - IMPLEMENT ME
+  // TODO - IMPLEMENT ME
 }
 
 /* =========== DON'T CHANGE THE CODE AFTER THIS LINE =============== */
 
 test('debounce', done => {
-	const costlyFn = jest.fn()
-	const fn = debounce(costlyFn, 100)
-	fn()
-	fn()
-	fn()
-	expect(costlyFn).toHaveBeenCalledTimes(0)
-	setTimeout(() => {
-		expect(costlyFn).toHaveBeenCalledTimes(1)
-		done()
-	}, 200)
+  const costlyFn = jest.fn()
+  const fn = debounce(costlyFn, 100)
+  fn()
+  fn()
+  fn()
+  expect(costlyFn).toHaveBeenCalledTimes(0)
+  setTimeout(() => {
+    expect(costlyFn).toHaveBeenCalledTimes(1)
+    done()
+  }, 200)
 })
