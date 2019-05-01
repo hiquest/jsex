@@ -6,13 +6,10 @@
 */
 
 function sample(arr, n) {
-  const length = arr.length
-  const indices = []
-  while (indices.length < n) {
-    const r = Math.floor(Math.random() * length)
-    if (indices.indexOf(r) === -1) indices.push(r)
-  }
-  return indices.map(i => arr[i])
+  return arr.reduce(acc => {
+    const index = Math.floor(Math.random() * arr.length)
+    return acc.concat(acc.indexOf(index) === -1 && acc.length < n ? arr[index] : [])
+  }, [])
 }
 
 /* =========== DON'T CHANGE THE CODE AFTER THIS LINE =============== */
