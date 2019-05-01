@@ -10,9 +10,7 @@
 */
 
 function map(arr, fn) {
-  let out = []
-  for (el of arr) out = [...out, fn(el)]
-  return out
+  return arr.reduce((acc, element) => acc.concat(fn(element)), [])
 }
 
 /* =========== DON'T CHANGE THE CODE AFTER THIS LINE =============== */

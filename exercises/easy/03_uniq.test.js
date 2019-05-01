@@ -6,10 +6,7 @@
 */
 
 function uniq(arr) {
-  return arr.reduce(
-    (acc, el) => (acc.indexOf(el) > -1 ? acc : [...acc, el]),
-    [],
-  )
+	return arr.reduce((acc, element) => acc.concat(acc.includes(element) ? [] : element), [])
 }
 
 /* =========== DON'T CHANGE THE CODE AFTER THIS LINE =============== */

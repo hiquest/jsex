@@ -8,7 +8,7 @@
 */
 
 function filter(arr, fn) {
-  return arr.reduce((acc, el) => (fn(el) ? [...acc, el] : acc), [])
+	return arr.reduce((acc, element) => acc.concat(fn(element) ? element : []), [])
 }
 
 /* =========== DON'T CHANGE THE CODE AFTER THIS LINE =============== */
