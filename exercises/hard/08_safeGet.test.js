@@ -6,25 +6,18 @@
  * it returns null.
 */
 
-
-function safeGet() {
-  // IMPLEMENT ME
+function safeGet(obj, path) {
+	// TODO - IMPLEMENT ME
 }
 
-/* =========== DON'T CHANGE THE CODE AFTER THIS LINE ===============" */
+/* =========== DON'T CHANGE THE CODE AFTER THIS LINE =============== */
 
-const obj = {
-  a: {
-    b: {
-      c: 42
-    }
-  }
-}
+const obj = { a: { b: { c: 42 } } }
 
-test('gets a value by path', () => {
-  expect(safeGet(obj, 'a.b.c')).toEqual(42)
-})
+test('gets a value by path', () =>
+	expect(safeGet(obj, 'a.b.c')).toEqual(42)
+)
 
-test('returns null for non-existing values', () => {
-  expect(safeGet(obj, 'a.b.c.d')).toEqual(null)
-})
+test('returns null for non-existing values', () =>
+	expect(safeGet(obj, 'a.b.c.d')).toEqual(null)
+)

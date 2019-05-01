@@ -5,20 +5,17 @@
  * returns n random and uniq items from that list
 */
 
-
-function sample() {
-  // IMPLEMENT ME
+function sample(arr, n) {
+	// TODO - IMPLEMENT ME
 }
 
-/* =========== DON'T CHANGE THE CODE AFTER THIS LINE ===============" */
+/* =========== DON'T CHANGE THE CODE AFTER THIS LINE =============== */
 
 test('returns a sample from an array', () => {
-  const numbers = [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
-
-  for (i = 0; i < 10; i++) {
-    // trying 10 times to be sure ;)
-    const out = sample(numbers, 3)
-    expect(out.length).toEqual(3)
-    expect(out.every(x => x >= 1 && x <= 9)).toEqual(true)
-  }
-});
+	const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+	for (i = 0; i < 10; i++) {
+		const out = sample(numbers, 3)
+		expect(out.length).toEqual(3)
+		expect(out.every(x => x >= 1 && x <= 9)).toEqual(true)
+	}
+})
