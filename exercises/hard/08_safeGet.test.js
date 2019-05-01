@@ -7,8 +7,7 @@
 */
 
 function safeGet(obj, path) {
-  const keys = path.split('.')
-  return keys.reduce((acc, key) => ((acc || {})[key] ? acc[key] : null), obj)
+  return path.split('.').reduce((acc, element) => acc[element] ? acc[element] : null, obj)
 }
 
 /* =========== DON'T CHANGE THE CODE AFTER THIS LINE =============== */
