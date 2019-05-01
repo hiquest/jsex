@@ -1,14 +1,14 @@
 {
-  "name": "jsex",
-  "version": "1.0.0",
-  "description": "A collections of little but fun JavaScript exercises",
-  "main": "index.js",
-  "scripts": {
-    "test": "jest"
-  },
-  "author": "Yanis",
-  "license": "ISC",
-  "devDependencies": {
-    "jest": "^24.7.1"
-  }
+	"name": "jsex",
+	"version": "1.0.0",
+	"description": "A collections of little but fun JavaScript exercises",
+	"main": "index.js",
+	"scripts": {
+		"test": "jest"
+	},
+	"author": "Yanis",
+	"license": "ISC",
+	"devDependencies": {
+		"jest": "^24.7.1"
+	}
 }

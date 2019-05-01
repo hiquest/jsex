@@ -5,22 +5,15 @@
 */
 
 function flatten(arr) {
-  return arr.reduce(
-    (acc, el) => Array.isArray(el) ? [...acc, ...flatten(el)] : [...acc, el],
-  [])
+	return arr.reduce((acc, el) => Array.isArray(el) ? [...acc, ...flatten(el)] : [...acc, el], [])
 }
 
-/* =========== DON'T CHANGE THE CODE AFTER THIS LINE ===============" */
+/* =========== DON'T CHANGE THE CODE AFTER THIS LINE =============== */
 
-test('flattens an array', () => {
-  expect(
-    flatten([[1, 2], 3])
-  ).toEqual([1, 2, 3])
-});
+test('flattens an array', () =>
+	expect(flatten([[1, 2], 3])).toEqual([1, 2, 3])
+)
 
-// here's an asterix exercise. Feel free to skip it.
-test('deeply flattens an array', () => {
-  expect(
-    flatten([[1], 2, [[3], 4]])
-  ).toEqual([1, 2, 3, 4])
-});
+test('deeply flattens an array', () =>
+	expect(flatten([[1], 2, [[3], 4]])).toEqual([1, 2, 3, 4])
+)
