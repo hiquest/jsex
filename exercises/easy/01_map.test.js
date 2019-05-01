@@ -9,7 +9,7 @@
  * It's fine to use an imperative approach
 */
 
-function map() {
+function map(arr, fn) {
 	// TODO - IMPLEMENT ME
 }
 
