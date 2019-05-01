@@ -8,11 +8,10 @@
 */
 
 function filter(arr, fn) {
-	return arr.reduce((acc, el) => fn(el) ? [...acc, el] : acc, [])
+  return arr.reduce((acc, el) => (fn(el) ? [...acc, el] : acc), [])
 }
 
 /* =========== DON'T CHANGE THE CODE AFTER THIS LINE =============== */
 
 test('maps an array', () =>
-	expect(filter([-1, 0, 1, 2, 3], x => x > 0)).toEqual([1, 2, 3])
-)
+  expect(filter([-1, 0, 1, 2, 3], x => x > 0)).toEqual([1, 2, 3]))

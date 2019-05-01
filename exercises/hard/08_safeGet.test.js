@@ -7,18 +7,15 @@
 */
 
 function safeGet(obj, path) {
-	const keys = path.split('.')
-	return keys.reduce((acc, key) => (acc || {})[key] ? acc[key] : null, obj)
+  const keys = path.split('.')
+  return keys.reduce((acc, key) => ((acc || {})[key] ? acc[key] : null), obj)
 }
 
 /* =========== DON'T CHANGE THE CODE AFTER THIS LINE =============== */
 
 const obj = { a: { b: { c: 42 } } }
 
-test('gets a value by path', () =>
-	expect(safeGet(obj, 'a.b.c')).toEqual(42)
-)
+test('gets a value by path', () => expect(safeGet(obj, 'a.b.c')).toEqual(42))
 
 test('returns null for non-existing values', () =>
-	expect(safeGet(obj, 'a.b.c.d')).toEqual(null)
-)
+  expect(safeGet(obj, 'a.b.c.d')).toEqual(null))

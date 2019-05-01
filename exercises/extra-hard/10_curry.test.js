@@ -7,29 +7,28 @@
 */
 
 function curry(fn, arity) {
-	arity = arity || fn.length
-	return function(...args) {
-		if (args.length < arity) {
-			function f(...lefts) {
-				return fn(...args, ...lefts)
-			}
-			return curry(f, arity - args.length)
-		} else {
-			return fn(...args)
-		}
-	}
+  arity = arity || fn.length
+  return function(...args) {
+    if (args.length < arity) {
+      function f(...lefts) {
+        return fn(...args, ...lefts)
+      }
+      return curry(f, arity - args.length)
+    } else {
+      return fn(...args)
+    }
+  }
 }
 
 /* =========== DON'T CHANGE THE CODE AFTER THIS LINE =============== */
 
 test('curries a function', () =>
-	expect(curry((x, y) => x + y)(5)(10)).toEqual(15)
-)
+  expect(curry((x, y) => x + y)(5)(10)).toEqual(15))
 
 test('curries a function of many arguments', () => {
-	const sum = curry((a, b, c) => a + b + c)
-	expect(sum(1, 2, 3)).toEqual(6)
-	expect(sum(1)(2, 3)).toEqual(6)
-	expect(sum(1, 2)(3)).toEqual(6)
-	expect(sum(1)(2)(3)).toEqual(6)
+  const sum = curry((a, b, c) => a + b + c)
+  expect(sum(1, 2, 3)).toEqual(6)
+  expect(sum(1)(2, 3)).toEqual(6)
+  expect(sum(1, 2)(3)).toEqual(6)
+  expect(sum(1)(2)(3)).toEqual(6)
 })

@@ -10,14 +10,12 @@
 */
 
 function map(arr, fn) {
-	let out = []
-	for (el of arr)
-		out = [...out, fn(el)]
-	return out
+  let out = []
+  for (el of arr) out = [...out, fn(el)]
+  return out
 }
 
 /* =========== DON'T CHANGE THE CODE AFTER THIS LINE =============== */
 
 test('maps an array', () =>
-	expect(map([1, 2, 3], x => x ** 2)).toEqual([1, 4, 9])
-)
+  expect(map([1, 2, 3], x => x ** 2)).toEqual([1, 4, 9]))
