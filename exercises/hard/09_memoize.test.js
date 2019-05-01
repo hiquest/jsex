@@ -15,7 +15,7 @@ function memoize(fn) {
   const cache = {}
   return (...args) => {
     const key = args.join('-')
-    return Object.keys(cache).indexOf(key) === -1 ? addKeyVal(cache)(key)(fn(...args)) : cache[key]
+    return Object.keys(cache).includes(key) ? cache[key] : addKeyVal(cache)(key)(fn(...args))
   }
 }
 
