@@ -5,8 +5,7 @@
  * returns n random and uniq items from that list
 */
 
-
-function sample() {
+function sample(arr, n) {
 	// TODO - IMPLEMENT ME
 }
 

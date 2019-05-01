@@ -7,7 +7,7 @@
  * This time use Array.prototype.reduce
 */
 
-function filter() {
+function filter(arr, fn) {
 	// TODO - IMPLEMENT ME
 }
 

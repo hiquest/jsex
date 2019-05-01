@@ -6,8 +6,7 @@
  * it returns null.
 */
 
-
-function safeGet() {
+function safeGet(obj, path) {
 	// TODO - IMPLEMENT ME
 }
 
