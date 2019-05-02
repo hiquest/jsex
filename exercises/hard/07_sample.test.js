@@ -8,7 +8,7 @@
 function sample(arr, n) {
   return arr.reduce(acc => {
     const index = Math.floor(Math.random() * arr.length)
-    return acc.concat(acc.indexOf(index) === -1 && acc.length < n ? arr[index] : [])
+    return acc.concat(acc.includes(index) || acc.length === n ? [] : arr[index])
   }, [])
 }
 
