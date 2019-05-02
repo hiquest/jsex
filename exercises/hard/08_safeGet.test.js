@@ -4,14 +4,13 @@
  * safeGet is a function that returns a nested attribute by path from an array
  * no matter how deep. It is called safe, because if the element doesn't exists
  * it returns null.
-*/
+ */
 
 function safeGet(obj, path) {
-  const keys = path.split('.')
-  return keys.reduce((acc, key) => ((acc || {})[key] ? acc[key] : null), obj)
+  return path.split('.').reduce((acc, element) => acc[element] ? acc[element] : null, obj)
 }
 
-/* =========== DON'T CHANGE THE CODE AFTER THIS LINE =============== */
+/* =========== TESTS =============== */
 
 const obj = { a: { b: { c: 42 } } }
 

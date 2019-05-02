@@ -3,19 +3,16 @@
  *
  * Takes an array of items and a number n,
  * returns n random and uniq items from that list
-*/
+ */
 
 function sample(arr, n) {
-  const length = arr.length
-  const indices = []
-  while (indices.length < n) {
-    const r = Math.floor(Math.random() * length)
-    if (indices.indexOf(r) === -1) indices.push(r)
-  }
-  return indices.map(i => arr[i])
+  return arr.reduce(acc => {
+    const index = Math.floor(Math.random() * arr.length)
+    return acc.concat(acc.includes(index) || acc.length === n ? [] : arr[index])
+  }, [])
 }
 
-/* =========== DON'T CHANGE THE CODE AFTER THIS LINE =============== */
+/* =========== TESTS =============== */
 
 test('returns a sample from an array', () => {
   const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]

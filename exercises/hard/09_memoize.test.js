@@ -2,20 +2,24 @@
  * MEMOIZE
  *
  * Memoize converts a function into a new function that caches it's values for
- * the same set of arguments (this is handy when a function executets some heavy
+ * the same set of arguments (this is handy when a function executes some heavy
  * logic and you don't want to waste resources)
-*/
+ */
+
+const addKeyVal = dict => key => val => {
+  dict[key] = val
+  return dict
+}
 
 function memoize(fn) {
   const cache = {}
-  return function(...args) {
+  return (...args) => {
     const key = args.join('-')
-    if (Object.keys(cache).indexOf(key) === -1) cache[key] = fn(...args)
-    return cache[key]
+    return Object.keys(cache).includes(key) ? cache[key] : addKeyVal(cache)(key)(fn(...args))
   }
 }
 
-/* =========== DON'T CHANGE THE CODE AFTER THIS LINE =============== */
+/* =========== TESTS =============== */
 
 test('caches the value of a function', () => {
   const costlyFn = jest.fn()
