@@ -5,8 +5,9 @@
 ## How to use it
 
 1. Clone the repo.
-2. Run `npm run test` and watch the tests fail.
-3. Fix the tests one by one.
+2. Run `npm install`
+3. Run `npm run test` and watch the tests fail.
+4. Fix the tests one by one.
 
 ## Exercises
 
@@ -33,7 +34,7 @@
 1. curry
 2. debounce
 
-## IDDQD
+## Solutions
 
 - You can see the solutions if you switch to the `solutions` branch. But that's no fun.
 
