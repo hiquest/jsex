@@ -19,7 +19,7 @@ function memoize(fn) {
   }
 }
 
-/* =========== DON'T CHANGE THE CODE AFTER THIS LINE =============== */
+/* =========== TESTS =============== */
 
 test('caches the value of a function', () => {
   const costlyFn = jest.fn()

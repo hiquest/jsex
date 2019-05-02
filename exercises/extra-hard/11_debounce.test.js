@@ -4,23 +4,21 @@
  * Creates a function that will not be called until the triggered time runs out.
  * That means you can call it many times, but it will only actually be executed
  * when the specified time passed since the last call.
-*/
+ */
 
 function debounce(func, wait, immediate) {
   let timeout
   return (...args) => {
-    const later = () => {
+    clearTimeout(timeout)
+    timeout = setTimeout(() => {
       timeout = null
       if (!immediate) func(...args)
-    }
-    const callNow = immediate && !timeout
-    clearTimeout(timeout)
-    timeout = setTimeout(later, wait)
-    if (callNow) func(...args)
+    }, wait)
+    if (immediate && !timeout) func(...args)
   }
 }
 
-/* =========== DON'T CHANGE THE CODE AFTER THIS LINE =============== */
+/* =========== TESTS =============== */
 
 test('debounce', done => {
   const costlyFn = jest.fn()

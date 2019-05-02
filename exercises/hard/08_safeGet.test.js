@@ -10,7 +10,7 @@ function safeGet(obj, path) {
   return path.split('.').reduce((acc, element) => acc[element] ? acc[element] : null, obj)
 }
 
-/* =========== DON'T CHANGE THE CODE AFTER THIS LINE =============== */
+/* =========== TESTS =============== */
 
 const obj = { a: { b: { c: 42 } } }
 

@@ -12,7 +12,7 @@ function sample(arr, n) {
   }, [])
 }
 
-/* =========== DON'T CHANGE THE CODE AFTER THIS LINE =============== */
+/* =========== TESTS =============== */
 
 test('returns a sample from an array', () => {
   const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]

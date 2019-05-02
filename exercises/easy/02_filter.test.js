@@ -11,7 +11,7 @@ function filter(arr, fn) {
 	return arr.reduce((acc, element) => acc.concat(fn(element) ? element : []), [])
 }
 
-/* =========== DON'T CHANGE THE CODE AFTER THIS LINE =============== */
+/* =========== TESTS =============== */
 
 test('maps an array', () =>
   expect(filter([-1, 0, 1, 2, 3], x => x > 0)).toEqual([1, 2, 3]))

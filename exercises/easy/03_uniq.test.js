@@ -9,7 +9,7 @@ function uniq(arr) {
 	return arr.reduce((acc, element) => acc.concat(acc.includes(element) ? [] : element), [])
 }
 
-/* =========== DON'T CHANGE THE CODE AFTER THIS LINE =============== */
+/* =========== TESTS =============== */
 
 test('removes duplicates from an array', () =>
   expect(uniq([1, 1, 2, 3, 3, 1])).toEqual([1, 2, 3]))

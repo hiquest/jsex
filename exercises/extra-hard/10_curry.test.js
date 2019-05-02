@@ -14,7 +14,7 @@ function curry(fn, arity) {
       : fn(...args)
 }
 
-/* =========== DON'T CHANGE THE CODE AFTER THIS LINE =============== */
+/* =========== TESTS =============== */
 
 test('curries a function', () =>
   expect(curry((x, y) => x + y)(5)(10)).toEqual(15))

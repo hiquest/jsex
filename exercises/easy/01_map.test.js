@@ -13,7 +13,7 @@ function map(arr, fn) {
   return arr.reduce((acc, element) => acc.concat(fn(element)), [])
 }
 
-/* =========== DON'T CHANGE THE CODE AFTER THIS LINE =============== */
+/* =========== TESTS =============== */
 
 test('maps an array', () =>
   expect(map([1, 2, 3], x => x ** 2)).toEqual([1, 4, 9]))
